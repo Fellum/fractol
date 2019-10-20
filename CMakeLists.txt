@@ -7,7 +7,7 @@ set(CMAKE_C_FLAGS ${CMAKE_C_FLAGS} "-lmlx -framework OpenGL -framework AppKit -l
 
 aux_source_directory(src src)
 include_directories(include)
-include_directories(lib/libft)
+include_directories(lib/libft/include)
 include_directories(lib/minilibx)
 
 add_subdirectory(lib/libft)
