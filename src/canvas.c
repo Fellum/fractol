@@ -22,7 +22,7 @@ t_canvas	*init_canvas(void *mlx, void *window, int width, int height)
 	res = malloc(sizeof(t_canvas));
 	res->img_ptr = mlx_new_image(mlx, width, height);
 	res->img_data = (int *)mlx_get_data_addr(res->img_ptr, &(res->bpp),
-											 &(res->size_line), &(res->endian));
+		&(res->size_line), &(res->endian));
 	res->mlx_ptr = mlx;
 	res->win_ptr = window;
 	res->width = width;

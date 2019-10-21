@@ -1,27 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   events.c                                           :+:      :+:    :+:   */
+/*   fract_funcs.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jleann <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/21 18:45:01 by jleann            #+#    #+#             */
-/*   Updated: 2019/10/21 18:45:04 by jleann           ###   ########.fr       */
+/*   Created: 2019/10/21 20:09:15 by jleann            #+#    #+#             */
+/*   Updated: 2019/10/21 20:09:17 by jleann           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fractol.h"
-#include <stdlib.h>
+#ifndef FRACT_FUNCS_H
+# define FRACT_FUNCS_H
 
-int	close_event(t_fract *data)
-{
-	(void)data;
-	exit(0);
-}
+int	mandelbrot_func(double x, double y, t_fractstate *fstate);
+int	julia_func(double x, double y, t_fractstate *fstate);
+int	mirrored_julia_func(double x, double y, t_fractstate *fstate);
+int	burning_ship_func(double x, double y, t_fractstate *fstate);
+int	sin_julia_func(double x, double y, t_fractstate *fstate);
 
-int	draw_tick(t_fract *data)
-{
-	apply_instate(data);
-	draw_fract(data);
-	return (0);
-}
+#endif

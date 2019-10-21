@@ -3,7 +3,7 @@ project(fractol C)
 
 set(CMAKE_C_STANDARD 99)
 
-set(CMAKE_C_FLAGS ${CMAKE_C_FLAGS} "-lmlx -framework OpenGL -framework AppKit -lm")
+set(CMAKE_C_FLAGS ${CMAKE_C_FLAGS} "-lmlx -framework OpenGL -framework AppKit -lm -O3")
 
 aux_source_directory(src src)
 include_directories(include)
